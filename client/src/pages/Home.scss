@@ -1,0 +1,45 @@
+@import "../styles/variables.scss";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background: $main-bg !important; // Use variables for themes if you like
+}
+
+.icons-left {
+    font-size: 27.65px;
+    height: 47px;
+    padding: 0px 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 19px;
+}
+
+.icons-right {
+    display: flex;
+    font-size: 32px;
+    align-items: center;
+
+    .anticon {
+        padding: 8px;
+        border-radius: 10px;
+        margin-right: 24px;
+        color: #000 !important;
+        font-size: 33px;
+
+        &:last-child {
+            margin-right: 8px;
+        }
+    }
+}
+
+.menu-item {
+    padding: 10px;
+    border-bottom: 2px solid #000;
+}
+
+.menu-itemlog {
+    margin: 10px;
+}

@@ -1,0 +1,21 @@
+@import "../styles/variables.scss";
+.chart {
+
+    .header {
+        .head {
+            font-size: 39.81px;
+        }
+
+        margin: 20px 10px;
+    }
+    .selectval{
+        padding: 10px 14px;
+        font-size: 16.2px;
+        color: $white-color;
+        background-color: $main-color;
+        border-radius: 40px;
+        option{
+            padding: 4px;
+        }
+    }
+}

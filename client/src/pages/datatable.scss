@@ -1,0 +1,87 @@
+.datatable {
+    padding: 20px;
+
+    .datagrid {
+        border: none;
+
+        .MuiDataGrid-toolbarContainer {
+            flex-direction: row-reverse;
+        }
+
+        .profile-info {
+            padding: 10px;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+}
+
+.BatteryMake {
+    margin: 8px 0px 16px;
+    font-weight: 400;
+}
+
+.flexy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .pagination {
+        margin: 24px;
+        border: 1px solid #000;
+        border-radius: 5px;
+
+        .pagebutton {
+            padding: 10px 20px;
+        }
+    }
+}
+
+.css-g1du22 .MuiDataGrid-columnHeaderTitleContainer {
+    justify-content: center
+}
+
+.css-128fb87-MuiDataGrid-toolbarContainer {
+    margin: 4px 14px;
+}
+
+.css-1ps6pg7-MuiPaper-root,
+.css-154sxbz-MuiPaper-root-MuiDataGrid-paper {
+    background-color: #E6ECF9 !important;
+    border-radius: 12px !important;
+}
+
+.css-az8st9-MuiDataGrid-root .MuiDataGrid-columnHeaderTitleContainer {
+    justify-content: center !important;
+}
+
+.css-az8st9-MuiDataGrid-root .MuiDataGrid-columnHeaderTitleContainer {
+    justify-content: center !important;
+}
+
+.css-aoeo82 {
+    background: #E6ECF9 !important;
+}
+
+.css-1bvqkfl {
+    background: #E6ECF9 !important;
+}
+
+.shimmer {
+    background-color: #ccc;
+}
+
+.css-g1du22 .MuiDataGrid-cell--textRight,
+.MuiDataGrid-cell--textLeft {
+    justify-content: center !important;
+}
+
+.css-az8st9-MuiDataGrid-root .MuiDataGrid-cell--textRight {
+    justify-content: center !important;
+}

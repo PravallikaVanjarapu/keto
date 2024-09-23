@@ -1,0 +1,19 @@
+{
+    "PORT": 8500,
+    "URL": "PROJECT-URL",
+    "EMAIL_SMTP": {
+        "HOST": "Your Host",
+        "AUTH": {
+            "USER": "USERNAME",
+            "PASS": "PASSWORD"
+        },
+        "PORT": 465
+    },
+    "SEND_SMS": {
+        "TWILIO_SID": "ACbXXXXXXXXXXXXXXXXXXXXXXXX",
+        "TWILIO_TOKEN": "c42XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "TWILIO_NUMBER": "+14XXXXXXXXXX"
+    },
+    "JWT_SECRET": "ketomotors",
+    "DB_URI": "mongodb+srv://nikhila:nikhila@cluster0.h1nv5.mongodb.net/"
+}

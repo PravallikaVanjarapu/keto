@@ -1,0 +1,29 @@
+.menu-items {
+    display: flex;
+    align-items: center; // Ensures vertical center alignment of all items in the menu item
+
+    .ant-menu-title-content {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        height: 40px;
+        justify-content: space-between;
+
+        .info-button {
+            margin-left: auto; // Pushes the icon to the far right of the menu item
+            padding-left: 10px; // Adds space between the icon and the preceding text
+            color: #5ea25e; // Variable for color, replace with your color code if needed
+            font-size: 32px; // Set a larger font size for the icon
+
+            svg {
+                vertical-align: middle; // Align the icon vertically in the middle
+            }
+        }
+    }
+
+    .ant-menu-title-content:hover {
+        background-color: #e6ecf9;
+        transition: background-color 0.5s;
+        border-radius: 8px;
+    }
+}

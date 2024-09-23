@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Monoton:wght@200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ant-layout-sider-children {
+  background-color: #E6ECF9 !important;
+}
+
+body {
+  width: 100%;
+}
+
+.ant-menu,
+.ant-menu-root,
+.ant-menu-inline,
+.ant-menu-light,
+.menu-bar,
+.css-dev-only-do-not-override-1ae8k9u {
+  background-color: #E6ECF9;
+}
+
+.ant-layout-sider-trigger {
+  background-color: #E6ECF9 !important;
+}
+
+.sidebar {
+  color: #E6ECF9 !important;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background-color: #e6ecf5;
+  padding: 12px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background: #F5F5F5 !important;
+}
+
+.menu-bar {
+  height: 75vh;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  font-size: 1rem;
+  position: relative;
+
+}
+
+@media (max-width: 768px) {
+  .menu-bar {
+    height: 100vh;
+  }
+}
+
+.theme-toggle-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1 rem;
+}
+
+.toggle {
+  margin-left: 15px;
+}
+
+.menu-items {
+  background-color: transparent !important;
+  color: #000 !important;
+}

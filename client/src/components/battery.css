@@ -1,0 +1,262 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --gradient-color-red: linear-gradient(90deg,
+            hsl(7, 89%, 46%) 15%,
+            hsl(11, 93%, 68%) 100%);
+    --gradient-color-orange: linear-gradient(90deg,
+            hsl(22, 89%, 46%) 15%,
+            hsl(54, 90%, 45%) 100%);
+    --gradient-color-yellow: linear-gradient(90deg,
+            hsl(54, 89%, 46%) 15%,
+            hsl(92, 90%, 45%) 100%);
+    --gradient-color-green: linear-gradient(90deg,
+            hsl(92, 89%, 46%) 15%,
+            hsl(92, 90%, 68%) 100%);
+    --text-color: #fff;
+    --body-color: #2c2c2e;
+    --container-color: #2c2c2e;
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+
+    --biggest-font-size: 2.5rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 2.75rem;
+        --normal-font-size: 1rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*=============== BASE ===============*/
+.battery-body {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+}
+
+/*=============== BATTERY ===============*/
+.battery {
+    display: grid;
+    place-items: center;
+    margin: 0 0.5rem;
+}
+
+.battery__card {
+    position: relative;
+    width: 100%;
+    height: 224px;
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.battery__text {
+    margin-bottom: .5rem;
+}
+
+.battery__percentage {
+    font-size: var(--biggest-font-size);
+}
+
+.battery__status {
+    position: absolute;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: #fff;
+    font-size: var(--smaller-font-size);
+}
+
+.battery__status i {
+    font-size: 1.25rem;
+}
+
+.battery__pill {
+    position: relative;
+    width: 75px;
+    height: 180px;
+    background-color: var(--container-color);
+    box-shadow: inset 20px 0 48px hsl(0, 0%, 16%),
+        inset -4px 12px 48px hsl(0, 0%, 56%);
+    border-radius: 3rem;
+    justify-self: flex-end;
+}
+
+.battery__level {
+    position: absolute;
+    inset: 2px;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.battery__liquid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: var(--gradient-color-red);
+    box-shadow: inset -10px 0 12px hsla(0, 0%, 0%, .1),
+        inset 12px 0 12px hsla(0, 0%, 0%, .15);
+    transition: .3s;
+}
+
+.battery__liquid::after {
+    content: '';
+    position: absolute;
+    height: 8px;
+    background: var(--gradient-color-red);
+    box-shadow: inset 0px -3px 6px hsla(0, 0%, 0%, .2);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -4px;
+    border-radius: 50%;
+}
+
+/* Full battery icon color */
+.green-color {
+    background: var(--gradient-color-green);
+}
+
+/* Battery charging animation */
+.animated-green {
+    background: var(--gradient-color-green);
+    animation: animated-charging-battery 1.2s infinite alternate;
+}
+
+/* Low battery animation */
+.animated-red {
+    background: var(--gradient-color-red);
+    animation: animated-low-battery 1.2s infinite alternate;
+}
+
+.animated-green,
+.animated-red,
+.green-color {
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes animated-charging-battery {
+    0% {
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 0 0 6px hsl(92, 90%, 68%);
+    }
+}
+
+@keyframes animated-low-battery {
+    0% {
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 0 0 8px hsl(7, 89%, 46%);
+    }
+}
+
+/* Liquid battery with gradient color */
+.gradient-color-red,
+.gradient-color-red::after {
+    background: var(--gradient-color-red);
+}
+
+.gradient-color-orange,
+.gradient-color-orange::after {
+    background: var(--gradient-color-orange);
+}
+
+.gradient-color-yellow,
+.gradient-color-yellow::after {
+    background: var(--gradient-color-yellow);
+}
+
+.gradient-color-green,
+.gradient-color-green::after {
+    background: var(--gradient-color-green);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+    .battery__card {
+        zoom: .6;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 430px) {
+    .battery__card {
+        width: 300px;
+    }
+}
+
+.capsule {
+    background-color: #2c2c2e;
+    color: #ddd;
+    padding: 12px;
+    margin: 12px 25px;
+    display: flex;
+    gap: 10px;
+    border-radius: 23px;
+}
+
+.info-img {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.info-head {
+    font-size: 14px;
+
+}
+
+.info-value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.status {
+    margin: 15px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-img {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 3px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    cursor: pointer;
+    transition: border 0.1s ease-out;
+}
+
+.stat-img:hover,
+.stat-img.active {
+    /* Apply styles for both hover and active states */
+    opacity: 0.7;
+
+}

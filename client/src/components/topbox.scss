@@ -1,0 +1,75 @@
+@import "../styles/variables.scss";
+
+.topBox {
+    border-radius: 23px;
+
+    h1 {
+        font-size: 30px;
+        font-weight: normal;
+        display: inline;
+    }
+
+    span {
+        margin-left: 8px;
+        display: inline-block;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        align-items: center;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+
+            .listItem {
+                margin: 10px 0;
+
+                .list-value {
+                    font-size: 27.65px;
+                    font-weight: bold;
+                }
+
+                .list-head {
+                    font-size: 16px;
+                    font-weight: light;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            background-color: $blue-bg;
+            flex-direction: column;
+            align-items: right;
+            padding: 10px;
+            border-radius: 27px;
+
+            .battery-img {
+                object-fit: contain;
+
+                img {
+                    padding: 10px;
+                    width: 100%;
+                }
+            }
+
+            .battery-data {
+                text-align: center;
+                color: $main-color;
+                display: inline;
+                font-size: 10px;
+                span{
+                    font-size: 10px;
+                    display: inline;
+                    font-weight: bold;
+                }
+            }
+
+
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    align-items: center;
+    background: url('../assets/Battery/loginbackground.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in;
+
+    .heading {
+        width: 100%;
+        text-align: left;
+
+        .logo {
+            background-color: transparent;
+        }
+    }
+
+
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        position: relative;
+        top: 60px;
+        right: 30px;
+
+        .logo-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 180px;
+
+            .logo {
+                background-color: transparent;
+            }
+
+            .logo-content {
+                font-size: 33.16px;
+                color: #ccc;
+                font-weight: 600;
+            }
+
+
+        }
+
+
+        .login-card {
+            padding: 20px;
+            background: rgb(255 255 255 / 8%);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+
+
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input,select {
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                    color: #ccc;
+                    background-color: transparent;
+                }
+                select{
+                    background-color: #041643;
+                }
+
+                .row {
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 12px;
+
+                    p {
+                        font-size: small;
+                        color: #696969;
+                    }
+
+                    button {
+                        width: 100px;
+                        padding: 10px;
+                        background-color: #5d73c4;
+                        color: white;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-content {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .login-card {
+            width: 90%;
+            max-width: 300px;
+        }
+
+        .logo-card {
+            align-items: center !important;
+        }
+    }
+}

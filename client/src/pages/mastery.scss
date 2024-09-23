@@ -1,0 +1,114 @@
+@import "../styles/variables.scss";
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+
+    .card {
+        width: 450px;
+
+        .serialselect {
+            display: flex;
+            flex-direction: row;
+
+            .down {
+                width: 32px;
+                height: 32px;
+            }
+
+            select {
+                border-radius: 5px;
+                padding: 0px 0px 4px 0px;
+                margin: 0px 0px 12px 0px;
+                width: fit-content;
+                background: none;
+            }
+
+        }
+
+        .counts {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+        }
+
+        .flex {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        background-color: #60CAA0;
+        padding: 28px;
+        border-radius: 48px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 250px;
+        justify-content: center;
+
+        .make {
+            font-size: 12.8px;
+
+        }
+
+
+        .bat {
+            width: 100% !important;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+        }
+
+        .batterymake {
+            font-size: 31.25px;
+            cursor: pointer;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+
+            .undercdc {
+                width: 100%;
+                padding-top: 6px;
+                font-size: 31.25px;
+            }
+
+            .arrow {
+                .arrow-button {
+                    background-color: transparent !important;
+                    cursor: pointer;
+                }
+
+                display: flex;
+                align-items: center;
+                margin-top: 6px;
+                justify-content: center;
+                background-color: #2C2C2E;
+                padding: 6px;
+                width: 70px;
+                height: 60px;
+                border-radius: 21px;
+            }
+
+        }
+
+        .chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .download {
+                cursor: pointer;
+            }
+        }
+    }
+}
